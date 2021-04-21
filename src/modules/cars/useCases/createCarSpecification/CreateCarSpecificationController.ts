@@ -6,6 +6,7 @@ import CreateCarSpecificationUseCase from './CreateCarSpecificationUseCase';
 export default class CreateCarSpecificationController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { id } = request.params;
+    const { user_id } = request.headers;
     const { specifications_id } = request.body;
 
     const createCarSpecificationUseCase = container.resolve(

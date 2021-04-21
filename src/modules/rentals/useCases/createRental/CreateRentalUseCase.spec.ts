@@ -27,8 +27,6 @@ describe('Create Rental', () => {
   });
 
   it('should create a new rental', async () => {
-    const car = await carsRepositoryInMemory.create({});
-
     const rental = await createRentalUseCase.execute({
       user_id: '12345',
       car_id: '11111',
